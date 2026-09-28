@@ -1,0 +1,19 @@
+set name = "Nine-Ball Roulette"
+set description = "This will be the most thrilling pool game you have ever played. Join up to 3 of your friends in this exciting pool roulette game! Eliminate each other with pool until only one person is left."
+set developer = "WaveBox Labs"
+set publisher = "WaveBox Labs"
+set exe = "$path/Nine_Ball_Roulette.exe"
+set steam-app-id = "3376250"
+
+@v1.1.5
+set max-size = 1389526877
+set size = 844116906
+download "magnet:?xt=urn:btih:28b0fd9798c158e1b67a938046866dc12e878eb0&dn=Nine-Ball%20Roulette&xl=560151364&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Nine-Ball Roulette/Nine-Ball.Roulette.v1.1.5-OFME.rar"
+rm "$path/Nine-Ball Roulette/Nine-Ball.Roulette.v1.1.5-OFME.rar"
+unzip "$path/Nine-Ball Roulette/Fix Repair/NineBallRoulette_Fix_Repair_Steam_V2_Generic.rar"
+rm "$path/Nine-Ball Roulette/Fix Repair/NineBallRoulette_Fix_Repair_Steam_V2_Generic.rar"
+rsynca "$path/Nine-Ball Roulette/Fix Repair|$path/Nine-Ball Roulette/Nine-Ball Roulette"
+rm "$path/Nine-Ball Roulette/Fix Repair"
+mv "$path/Nine-Ball Roulette/Nine-Ball Roulette/*|$path"
+rm "$path/Nine-Ball Roulette"
