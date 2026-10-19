@@ -1,0 +1,23 @@
+set name = "Among Us"
+set description = "An online and local party game of teamwork and betrayal for 4-15 players...in space!"
+set developer = "Innersloth"
+set publisher = "Innersloth"
+set exe = "$path/Among Us.exe"
+set steam-app-id = "945360"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/945360/b82c3f46da8f3c918e1c9e0d18bd6fa8fcef6801.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/945360/library_hero.jpg"
+set merch = "https://www.fangamer.com/collections/among-us"
+# We ask Innersloth to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
+
+@v19.0.0
+set max-size = 1891723344
+set size = 1161579460
+download "magnet:?xt=urn:btih:011f5542659c94298848204d5ce69968f4becac6&dn=Among%20Us&xl=730143884&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Among Us/Among.Us.v2026.9.293.0-OFME.rar"
+rm "$path/Among Us/Among.Us.v2026.9.293.0-OFME.rar"
+unzip "$path/Among Us/Fix Repair/AmongUs_Fix_Repair_GDK_Generic.rar"
+rm "$path/Among Us/Fix Repair/AmongUs_Fix_Repair_GDK_Generic.rar"
+rsynca "$path/Among Us/Fix Repair|$path/Among Us/Among Us"
+rm "$path/Among Us/Fix Repair"
+mv "$path/Among Us/Among Us/*|$path"
+rm "$path/Among Us"
