@@ -6,6 +6,7 @@ set exe = "$path/TotallyAccurateBattleSimulator.exe"
 set steam-app-id = "508440"
 set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/508440/50fbd075b1cbb63ab805d9e49bbe6c57c5c6e9ff.jpg"
 set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/508440/library_hero.jpg"
+set merch = "https://landfall.se/merch"
 # We ask Landfall to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
 
 @v1.0.7

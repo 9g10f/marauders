@@ -1,0 +1,22 @@
+set name = "Shift At Midnight"
+set description = "An online co-op detective horror for up to 3 players. Work together across randomly generated shifts to investigate your customers, as some are only pretending to be human. Make one mistake, and you’ll be forced to board up, set traps, and hide."
+set developer = "Bun Muen"
+set publisher = "Kwalee"
+set exe = "$path/ShiftAtMidnight.exe"
+set steam-app-id = "3722330"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/3722330/01fd2fcc54b5bfe212e8b7968573192db9782711.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3722330/2a852d92afb4e47069e23ef8dc2d3fa26a6087f5/library_hero.jpg"
+# We ask Bun Muen to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
+
+@v1.0.3.0729.2021
+set max-size = 1331083898
+set size = 902352626
+download "magnet:?xt=urn:btih:bec54cfda526308e274a0e76f13167426409c935&dn=Shift%20At%20Midnight&xl=428731272&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
+unzip "$path/Shift At Midnight/Shift.At.Midnight.v1.0.3.0729.2021-OFME.rar"
+rm "$path/Shift At Midnight/Shift.At.Midnight.v1.0.3.0729.2021-OFME.rar"
+unzip "$path/Shift At Midnight/Fix Repair/ShiftAtMidnight_Fix_Repair_Steam_Generic.rar"
+rm "$path/Shift At Midnight/Fix Repair/ShiftAtMidnight_Fix_Repair_Steam_Generic.rar"
+rsynca "$path/Shift At Midnight/Fix Repair|$path/Shift At Midnight/Shift At Midnight"
+rm "$path/Shift At Midnight/Fix Repair"
+mv "$path/Shift At Midnight/Shift At Midnight/*|$path"
+rm "$path/Shift At Midnight"
