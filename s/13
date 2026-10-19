@@ -1,0 +1,21 @@
+set name = "Stardew Valley"
+set description = "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?"
+set developer = "ConcernedApe"
+set publisher = "ConcernedApe"
+set exe = "$path/Stardew Valley.exe"
+set steam-app-id = "413150"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/413150/35d1377200084a4034238c05b0c8930451e2fb40.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/library_hero.jpg"
+
+@v1.6.15
+set max-size = 1323988083
+set size = 760639495
+download "magnet:?xt=urn:btih:063043892eac8f94c5eb249669548a3f93b7c3a5&dn=Stardew%20Valley&xl=563348588&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Stardew Valley/Stardew.Valley.v1.6.15-OFME.rar"
+rm "$path/Stardew Valley/Stardew.Valley.v1.6.15-OFME.rar"
+unzip "$path/Stardew Valley/Fix Repair/SW_Fix_Repair_Steam_Generic.rar"
+rm "$path/Stardew Valley/Fix Repair/SW_Fix_Repair_Steam_Generic.rar"
+rsynca "$path/Stardew Valley/Fix Repair|$path/Stardew Valley/Stardew Valley"
+rm "$path/Stardew Valley/Fix Repair"
+mv "$path/Stardew Valley/Stardew Valley/*|$path"
+rm "$path/Stardew Valley"

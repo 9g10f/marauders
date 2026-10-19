@@ -6,7 +6,6 @@ set exe = "$path/Liar's Bar.exe"
 set steam-app-id = "3097560"
 set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/3097560/5342338ad1fd3561c1ed8c6d2ed4ae0e6ada2e9c.jpg"
 set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3097560/library_hero.jpg"
-# We ask Curve Animation to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
 
 @v0.956
 set max-size = 19569991195

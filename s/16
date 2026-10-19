@@ -1,0 +1,21 @@
+set name = "Hollow Knight: Silksong"
+set description = "Discover a vast, haunted kingdom in Hollow Knight: Silksong! Explore, fight and survive as you ascend to the peak of a land ruled by silk and song."
+set developer = "Team Cherry"
+set publisher = "Team Cherry"
+set exe = "$path/Hollow Knight Silksong.exe"
+set steam-app-id = "1030300"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/1030300/b4a999c1302e3ac123c041fd41bb8a34528c6ab5.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/library_hero.jpg"
+
+@v1.0.28324
+set max-size = 10519672847
+set size = 8130730671
+download "magnet:?xt=urn:btih:7564ec79e74e72f7aadd1824f3a29c605588c229&dn=Hollow%20Knight%20Silksong&xl=2388942176&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Hollow Knight Silksong/Hollow.Knight.Silksong.v1.0.28324-OFME.rar"
+rm "$path/Hollow Knight Silksong/Hollow.Knight.Silksong.v1.0.28324-OFME.rar"
+unzip "$path/Hollow Knight Silksong/Fix Repair/HollowKnightSilksong_Fix_Repair_Steam_Generic.rar"
+rm "$path/Hollow Knight Silksong/Fix Repair/HollowKnightSilksong_Fix_Repair_Steam_Generic.rar"
+rsynca "$path/Hollow Knight Silksong/Fix Repair|$path/Hollow Knight Silksong/Hollow Knight Silksong"
+rm "$path/Hollow Knight Silksong/Fix Repair"
+mv "$path/Hollow Knight Silksong/Hollow Knight Silksong/*|$path"
+rm "$path/Hollow Knight Silksong"

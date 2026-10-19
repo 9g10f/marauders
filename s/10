@@ -1,0 +1,21 @@
+set name = "Terraria"
+set description = "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!"
+set developer = "Re-Logic"
+set publisher = "Re-Logic"
+set exe = "$path/Terraria.exe"
+set steam-app-id = "105600"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/105600/858961e95fbf869f136e1770d586e0caefd4cfac.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/library_hero.jpg"
+
+@v1.4.5.3
+set max-size = 1492956976
+set size = 810861252
+download "magnet:?xt=urn:btih:faa61fb3f68dad14ee3b0262a4f0adc206cf6021&dn=Terraria&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Terraria/Terraria.v1.4.5.3-OFME.rar"
+rm "$path/Terraria/Terraria.v1.4.5.3-OFME.rar"
+unzip "$path/Terraria/Fix Repair/Terraria_Fix_Repair_Steam_V3_Generic.rar"
+rm "$path/Terraria/Fix Repair/Terraria_Fix_Repair_Steam_V3_Generic.rar"
+rsynca "$path/Terraria/Fix Repair|$path/Terraria/Terraria"
+rm "$path/Terraria/Fix Repair"
+mv "$path/Terraria/Terraria/*|$path"
+rm "$path/Terraria"

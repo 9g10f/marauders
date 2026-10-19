@@ -6,14 +6,13 @@ set exe = "$path/BeamNG.drive.exe"
 set steam-app-id = "284160"
 set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/284160/34f8997c32b2f463caf2014aab4a95109a896ecc.jpg"
 set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/284160/872a6a68dcac5898fcc21c83c3e9def0168b1a1e/library_hero.jpg"
-# We ask BeamNG to provide us with a link to a donation platform or something similar, even thought they humbly deny many donations, so we can include it here, please open an issue about this and we will add it to this script
 
 @v0.39.2.1
 set max-size = 76141461540
 set size = 53686271918
 download "magnet:?xt=urn:btih:ea95327c52832b5ef4486703521ebcf178e7691f&dn=BeamNG%20Drive&xl=22455447892&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
 unzip "$path/BeamNB Drive/BeamNG.drive.v0.39.2.1-OFME.part01.rar"
-rm "$path/BeamNB Drive/BeamNG.drive.v0.39.2.1-OFME.part01.rar" "$path/BeamNB Drive/BeamNG.drive.v0.39.2.1-OFME.part02.rar" "$path/BeamNB Drive/BeamNG.drive.v0.39.2.1-OFME.part03.rar" "$path/BeamNB Drive/BeamNG.drive.v0.39.2.1-OFME.part04.rar" "$path/BeamNB Drive/BeamNG.drive.v0.39.2.1-OFME.part05.rar"
+rm "$path/BeamNB Drive/BeamNG.drive.v0.39.2.1-OFME.part*.rar"
 unzip "$path/BeamNB Drive/Fix Repair/BeamNGDrive_Fix_Repair_Steam_Generic.rar"
 rm "$path/BeamNB Drive/Fix Repair/BeamNGDrive_Fix_Repair_Steam_Generic.rar"
 rsynca "$path/BeamNB Drive/Fix Repair|$path/BeamNB Drive/BeamNB Drive"

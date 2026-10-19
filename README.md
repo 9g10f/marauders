@@ -83,5 +83,8 @@ mv <path1>|<path2>
 ```
 It moves files and directories from `path1` to `path2`. Can also be used to rename files/directories.
 
+## For the developers
+If you wish to include a donation/merch button in your game's page open an issue with a link to your donation/merch page and we'll add it.
+
 ## License
 marauders is free and licensed under the [GNU General Public License v3.0](LICENSE).

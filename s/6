@@ -6,7 +6,6 @@ set exe = "$path/Big Walk.exe"
 set steam-app-id = "1478500"
 set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg"
 set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1478500/f3bfb26a717fa99f84f4e831b1754e1f6a3032ad/library_hero.jpg"
-# We ask House House to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
 
 @v1.5.1
 set max-size = 7307809869

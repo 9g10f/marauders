@@ -1,0 +1,21 @@
+set name = "Papers, Please"
+set description = "Congratulations. The October labor lottery is complete. Your name was pulled. For immediate placement, report to the Ministry of Admission at Grestin Border Checkpoint. An apartment will be provided for you and your family in East Grestin. Expect a Class-8 dwelling."
+set developer = "Lucas Pope"
+set publisher = "3909"
+set exe = "$path/PapersPlease.exe"
+set steam-app-id = "239030"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/239030/102e22fc7e0689cb5a9d8cfdd5a6725d571d1a0f.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/239030/library_hero.jpg"
+
+@v1.4.11
+set max-size = 362827806
+set size = 181413903
+download "magnet:?xt=urn:btih:b92938bfb53ce62f003b4122e213323d92recover4b48c0&dn=Papers%2C%20Please&xl=136362892&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Papers, Please/Papers,.Please.v1.4.11-OFME.rar"
+rm "$path/Papers, Please/Papers,.Please.v1.4.11-OFME.rar"
+unzip "$path/Papers, Please/Fix Repair/PapersPlease_Fix_Repair_Steam_Generic.rar"
+rm "$path/Papers, Please/Fix Repair/PapersPlease_Fix_Repair_Steam_Generic.rar"
+rsynca "$path/Papers, Please/Fix Repair|$path/Papers, Please/Papers, Please"
+rm "$path/Papers, Please/Fix Repair"
+rsynca "$path/Papers, Please/Papers, Please|$path"
+rm "$path/Papers, Please/Papers, Please" 

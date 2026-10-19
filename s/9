@@ -7,7 +7,6 @@ set steam-app-id = "945360"
 set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/945360/b82c3f46da8f3c918e1c9e0d18bd6fa8fcef6801.jpg"
 set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/945360/library_hero.jpg"
 set merch = "https://www.fangamer.com/collections/among-us"
-# We ask Innersloth to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
 
 @v19.0.0
 set max-size = 1891723344

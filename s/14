@@ -1,0 +1,21 @@
+set name = "Portal 2"
+set description = "The \"Perpetual Testing Initiative\" has been expanded to allow you to design co-op puzzles for you and your friends!"
+set developer = "Valve"
+set publisher = "Valve"
+set exe = "$path/portal2.exe"
+set steam-app-id = "620"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/620/25a5a16b2423bf7487ac5340b5b0948cef48c5f8.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/620/library_hero.jpg"
+
+@v2.0.0.24022022
+set max-size = 25433948152
+set size = 15708948972
+download "magnet:?xt=urn:btih:47be9366b78838ed170d67eee2a557910e5b8f44&dn=Portal%202&xl=9724999180&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969"
+unzip "$path/Portal 2/Portal.2.Build.24022022-OFME.rar"
+rm "$path/Portal 2/Portal.2.Build.24022022-OFME.rar"
+unzip "$path/Portal 2/Fix Repair/Portal2_Fix_Repair_Steam_V3_Generic.rar"
+rm "$path/Portal 2/Fix Repair/Portal2_Fix_Repair_Steam_V3_Generic.rar"
+rsynca "$path/Portal 2/Fix Repair|$path/Portal 2/Portal 2"
+rm "$path/Portal 2/Fix Repair"
+mv "$path/Portal 2/Portal 2/*|$path"
+rm "$path/Portal 2"

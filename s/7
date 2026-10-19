@@ -1,0 +1,35 @@
+set name = "Bodycam"
+set description = "Bodycam is the first tactical multiplayer FPS with a true body-camera view in Unreal Engine 5. Close-quarters combats feel raw and loud. Every angle, callout, and bullet matters. Play Deathmatch, Team Deathmatch, and Wingman on photoreal maps where teamplay, tactics, and clutch skill are key."
+set developer = "Reissad Studio"
+set publisher = "Reissad Studio"
+set exe = "$path/Bodycam.exe"
+set steam-app-id = "2406770"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/2406770/793bf9dd10a0c8838879adca10459e77e1f02c51.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2406770/4591436a8e8c8f72314bc900e6e1da4cbd641e66/library_hero.jpg"
+set donate = "https://www.patreon.com/ReissadStudio"
+
+@v0.8.7.3
+set max-size = 115937140708
+set size = 60123282992
+download "magnet:?xt=urn:btih:375ccd607f8e5e8f48ffdd41a6df833aad74205f&dn=Bodycam&xl=55813857716&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Bodycam/Bodycam.Build.02092026-OFME.part01.rar"
+rm "$path/Bodycam/Bodycam.Build.02092026-OFME.part*.rar"
+unzip "$path/Bodycam/Fix Repair/Bodycam_Fix_Repair_Steam_V8_Generic.rar"
+rm "$path/Bodycam/Fix Repair/Bodycam_Fix_Repair_Steam_V8_Generic.rar"
+rsynca "$path/Bodycam/Fix Repair|$path/Bodycam/Bodycam"
+rm "$path/Bodycam/Fix Repair"
+mv "$path/Bodycam/Bodycam/*|$path"
+rm "$path/Bodycam"
+
+@v0.8.7.6
+set max-size = 115525526707
+set size = 59904076859
+download "magnet:?xt=urn:btih:e7c75e2c973106578873b7a511bd1804560a1f63&dn=Bodycam&xl=55621449848&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Bodycam/Bodycam.Build.25092026-OFME.part01.rar"
+rm "$path/Bodycam/Bodycam.Build.25092026-OFME.part*.rar"
+unzip "$path/Bodycam/Fix Repair/Bodycam_Fix_Repair_Steam_V8_Generic.rar"
+rm "$path/Bodycam/Fix Repair/Bodycam_Fix_Repair_Steam_V8_Generic.rar"
+rsynca "$path/Bodycam/Fix Repair|$path/Bodycam/Bodycam"
+rm "$path/Bodycam/Fix Repair"
+mv "$path/Bodycam/Bodycam/*|$path"
+rm "$path/Bodycam"
