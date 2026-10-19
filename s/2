@@ -1,0 +1,36 @@
+set name = "Ready or Not"
+set description = "Ready or Not is an intense, tactical, first-person shooter that depicts a modern-day world in which SWAT police units are called to defuse hostile and confronting situations."
+set developer = "VOID Interactive"
+set publisher = "VOID Interactive"
+set exe = "$path/ReadyOrNot.exe"
+set steam-app-id = "1144200"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/1144200/2ff04d6677a45dd95f0add718d646185539a82d8.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1144200/a10f8fa7840976fd8a54749100dd6e28ba98778a/library_hero.jpg"
+set merch = "https://eu.merch.voidinteractive.net/"
+# We ask VOID Interactive to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
+
+@v1.4.3
+set max-size = 94557754670
+set size = 51911834072
+download "magnet:?xt=urn:btih:3aee17c1a359d8f48a97d34d8e71e56fe71f4865&dn=Ready%20or%20Not&xl=41265290614&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
+unzip "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part01.rar"
+rm "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part01.rar" "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part02.rar" "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part03.rar" "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part04.rar" "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part05.rar" "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part06.rar" "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part07.rar" "$path/Ready or Not/Ready.Or.Not.Build.05052026-OFME.part08.rar"
+unzip "$path/Ready or Not/Fix Repair/ReadyOrNot_Fix_Repair_Steam_V5_Generic.rar"
+rm "$path/Ready or Not/Fix Repair/ReadyOrNot_Fix_Repair_Steam_V5_Generic.rar"
+rsynca "$path/Ready or Not/Fix Repair|$path/Ready or Not/Ready or Not"
+rm "$path/Ready or Not/Fix Repair"
+mv "$path/Ready or Not/Ready or Not/*|$path"
+rm "$path/Ready or Not"
+
+@v1.5.2
+set max-size = 90259168993
+set size = 48993878379
+download "magnet:?xt=urn:btih:3aee17c1a359d8f48a97d34d8e71e56fe71f4865&dn=Ready%20or%20Not&xl=41265290614&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
+unzip "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part01.rar"
+rm "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part01.rar" "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part02.rar" "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part03.rar" "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part04.rar" "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part05.rar" "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part06.rar" "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part07.rar" "$path/Ready or Not/Ready.Or.Not.Build.10092026-OFME.part08.rar"
+unzip "$path/Ready or Not/Fix Repair/ReadyOrNot_Fix_Repair_Steam_V5_Generic.rar"
+rm "$path/Ready or Not/Fix Repair/ReadyOrNot_Fix_Repair_Steam_V5_Generic.rar"
+rsynca "$path/Ready or Not/Fix Repair|$path/Ready or Not/Ready or Not"
+rm "$path/Ready or Not/Fix Repair"
+mv "$path/Ready or Not/Ready or Not/*|$path"
+rm "$path/Ready or Not"

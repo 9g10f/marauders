@@ -1,0 +1,22 @@
+set name = "Totally Accurate Battle Simulator"
+set description = "Be the leader of wobblers from ancient lands, spooky places, and fantasy worlds. Watch them fight in simulations made with the wobbliest physics system ever created, make your own wobblers in the unit creator and send your army off to fight your friends in multiplayer."
+set developer = "Landfall"
+set publisher = "Landfall"
+set exe = "$path/TotallyAccurateBattleSimulator.exe"
+set steam-app-id = "508440"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/508440/50fbd075b1cbb63ab805d9e49bbe6c57c5c6e9ff.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/508440/library_hero.jpg"
+# We ask Landfall to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
+
+@v1.0.7
+set max-size = 6735590384
+set size = 4951955460
+download "magnet:?xt=urn:btih:191058133e4163effc03b39fd4d5d336a78abb73&dn=Totally%20Accurate%20Battle%20Simulator&xl=1783634924&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969"
+unzip "$path/Totally Accurate Battle Simulator/Totally.Accurate.Battle.Simulator.v1.0.7-OFME.rar"
+rm "$path/Totally Accurate Battle Simulator/Totally.Accurate.Battle.Simulator.v1.0.7-OFME.rar"
+unzip "$path/Totally Accurate Battle Simulator/Fix Repair/TABS_Fix_Repair_Steam_Generic.rar"
+rm "$path/Totally Accurate Battle Simulator/Fix Repair/TABS_Fix_Repair_Steam_Generic.rar"
+rsynca "$path/Totally Accurate Battle Simulator/Fix Repair|$path/Totally Accurate Battle Simulator/Totally Accurate Battle Simulator"
+rm "$path/Totally Accurate Battle Simulator/Fix Repair"
+mv "$path/Totally Accurate Battle Simulator/Totally Accurate Battle Simulator/*|$path"
+rm "$path/Totally Accurate Battle Simulator"
