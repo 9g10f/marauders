@@ -4,9 +4,6 @@ set developer = "WaveBox Labs"
 set publisher = "WaveBox Labs"
 set exe = "$path/Nine_Ball_Roulette.exe"
 set steam-app-id = "3376250"
-set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/3376250/b31ae2d14421ea4bd549481dbab10f4972ef72d0.jpg"
-set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3376250/24924fe6b073b5cad501b6aae3bce3f56e17f8dd/library_hero.jpg"
-# We ask WaveBox Labs to provide us with a link to a donation platform or something similar so we can include it here, please open an issue about this and we will add it to this script
 
 @v1.1.5
 set max-size = 1389526877
