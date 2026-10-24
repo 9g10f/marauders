@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 )
 
@@ -32,6 +33,22 @@ func Search(logLevel string, sPath string) func (w http.ResponseWriter, r *http.
 			return 
 		}
 
+		limitStr := urlQuery.Get("limit")
+		var limit int
+
+		if limitStr != "" {
+			var err error
+			limit, err = strconv.Atoi(limitStr)
+			if err != nil {
+				json.NewEncoder(w).Encode(map[string]string{"error": "Invalid limit"})
+				slog.Warn("API misuse", "url", logUrl)
+
+				return 
+			}
+		} else {
+			limit = 0
+		}
+
 		scripts, err := os.ReadDir(sPath)
 		if err != nil {
 			json.NewEncoder(w).Encode(map[string]string{"error": "Internal server error"})
@@ -42,7 +59,11 @@ func Search(logLevel string, sPath string) func (w http.ResponseWriter, r *http.
 
 		var results []string
 
-		for _, script := range scripts {
+		for idx, script := range scripts {
+			if limit != 0 && idx == limit {
+				break
+			}
+
 			if script.IsDir() {
 				continue
 			}

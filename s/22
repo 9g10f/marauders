@@ -1,0 +1,21 @@
+set name = "Fears to Fathom - Scratch Creek"
+set description = "After noticing bone-chilling similarities to an episode of Fears to Fathom, Tessa and Marcus decide to share their own experience. Scratch Creek is an exclusively online co-op experience."
+set developer = "Rayll"
+set publisher = "Rayll Studios"
+set exe = "$path/Fears to Fathom - Scratch Creek.exe"
+set steam-app-id = "4121170"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/4121170/2b670650d2c926c43385656f1edc3796226fc953.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4121170/f14206bf24c193e1a38c0b6f093784097282aaba/library_hero.jpg"
+
+@11062026
+set max-size = 20526699976
+set size = 12957083610
+download "magnet:?xt=urn:btih:e49ee80624bc2f572eef40a7e90a1a6b5848d97d&dn=Fears%20to%20Fathom%20Scratch%20Creek&xl=7569616366&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Fears to Fathom Scratch Creek/Fears.to.Fathom.Scratch.Creek.Build.11062026-OFME.part1.rar"
+rm "$path/Fears to Fathom Scratch Creek/Fears.to.Fathom.Scratch.Creek.Build.11062026-OFME.part*.rar"
+unzip "$path/Fears to Fathom Scratch Creek/Fix Repair/FearsToFathomScratchCreek_Fix_Repair_Steam_Generic.rar"
+rm "$path/Fears to Fathom Scratch Creek/Fix Repair/FearsToFathomScratchCreek_Fix_Repair_Steam_Generic.rar"
+rsynca "$path/Fears to Fathom Scratch Creek/Fix Repair|$path/Fears to Fathom Scratch Creek/Fears to Fathom Scratch Creek"
+rm "$path/Fears to Fathom Scratch Creek/Fix Repair"
+mv "$path/Fears to Fathom Scratch Creek/Fears to Fathom Scratch Creek/*|$path"
+rm "$path/Fears to Fathom Scratch Creek"

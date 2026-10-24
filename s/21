@@ -1,0 +1,21 @@
+set name = "MECCHA CHAMELEON"
+set description = "Paint yourself to blend in! \"Meccha Chameleon\" is a new-sensation hide-and-seek game where you paint your white body to mimic the stage. Spot, pose, and \"artistic skill\" are keys to survival. Deceive Seekers with techniques that put chameleons to shame! Supports public matches and streaming."
+set developer = "lemorion_1224"
+set publisher = "lemorion_1224"
+set exe = "$path/PenguinHotel.exe"
+set steam-app-id = "4704690"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/4704690/fbef288370f6ae51cb0a5066d7fb13d26147c94a.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4704690/c0b4f82fd1f14a359b9f4503f885264c6fd3f28e/library_hero.jpg"
+
+@v3.3.1
+set max-size = 6206291388
+set size = 3103145694
+download "magnet:?xt=urn:btih:c89bb3882c162f52b3affb4c1866f6113325b7f9&dn=Meccha%20Chameleon&xl=2997085520&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Meccha Chameleon/MECCHA.CHAMELEON.v3.3.1-OFME.rar"
+rm "$path/Meccha Chameleon/MECCHA.CHAMELEON.v3.3.1-OFME.rar"
+unzip "$path/Meccha Chameleon/Fix Repair/MecchaChameleon_Fix_Repair_Steam_V2_Generic.rar"
+rm "$path/Meccha Chameleon/Fix Repair/MecchaChameleon_Fix_Repair_Steam_V2_Generic.rar"
+rsynca "$path/Meccha Chameleon/Fix Repair|$path/Meccha Chameleon/MECCHA CHAMELEON"
+rm "$path/Meccha Chameleon/Fix Repair"
+rsynca "$path/Meccha Chameleon/MECCHA CHAMELEON|$path"
+rm "$path/Meccha Chameleon/MECCHA CHAMELEON"

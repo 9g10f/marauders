@@ -1,0 +1,21 @@
+set name = "Sons Of The Forest"
+set description = "Sent to find a missing billionaire on a remote island, you find yourself in a cannibal-infested hellscape. Craft, build, and struggle to survive, alone or with friends, in this terrifying new open-world survival horror simulator."
+set developer = "Endnight Games Ltd"
+set publisher = "Newnight"
+set exe = "$path/SonsOfTheForest.exe"
+set steam-app-id = "1326470"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/1326470/bd28fe592b339cff5a3eef743f31e3166c984c68.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1326470/library_hero.jpg"
+
+@03102025
+set max-size = 28328421653
+set size = 16002006129
+download "magnet:?xt=urn:btih:ea757cd33bc0aa26ce126308652246821828327b&dn=Sons%20Of%20The%20Forest&xl=12326415524&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
+unzip "$path/Sons Of The Forest/Sons.Of.The.Forest.Build.03102025-OFME.part1.rar"
+rm "$path/Sons Of The Forest/Sons.Of.The.Forest.Build.03102025-OFME.part*.rar"
+unzip "$path/Sons Of The Forest/Fix Repair/SOTF_Fix_Repair_Steam_V2_Generic.rar"
+rm "$path/Sons Of The Forest/Fix Repair/SOTF_Fix_Repair_Steam_V2_Generic.rar"
+rsynca "$path/Sons Of The Forest/Fix Repair|$path/Sons Of The Forest/Sons Of The Forest"
+rm "$path/Sons Of The Forest/Fix Repair"
+mv "$path/Sons Of The Forest/Sons Of The Forest/*|$path"
+rm "$path/Sons Of The Forest"

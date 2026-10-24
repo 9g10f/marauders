@@ -1,0 +1,21 @@
+set name = "Content Warning"
+set description = "Film your friends doing scary things to become SpöökTube famous! (strongly advised to not go alone)"
+set developer = "Zorro, Wilnyl, Philip, thePetHen, Skog"
+set publisher = "Evil Landfall?"
+set exe = "$path/Content Warning.exe"
+set steam-app-id = "2881650"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/2881650/513cf7f2e22c94f4372369e29bffccc4c239e9c0.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2881650/library_hero.jpg"
+
+@v1.24.0
+set max-size = 963211631
+set size = 645391300
+download "magnet:?xt=urn:btih:06c6f5b47da6ac014d815f699014221bdc343c78&dn=Content%20Warning&xl=317820364&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
+unzip "$path/Content Warning/Content.Warning.v1.24.0-OFME.rar"
+rm "$path/Content Warning/Content.Warning.v1.24.0-OFME.rar"
+unzip "$path/Content Warning/Fix Repair/ContentWarning_Fix_Repair_Steam_V5_Generic.rar"
+rm "$path/Content Warning/Fix Repair/ContentWarning_Fix_Repair_Steam_V5_Generic.rar"
+rsynca "$path/Content Warning/Fix Repair|$path/Content Warning/Content Warning"
+rm "$path/Content Warning/Fix Repair"
+mv "$path/Content Warning/Content Warning/*|$path"
+rm "$path/Content Warning"

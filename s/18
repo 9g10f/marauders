@@ -1,0 +1,21 @@
+set name = "How to Fish"
+set description = "A 1-4 player physics based fishing simulator. While drinking and boating you suddenly crash into a small island. To work your way back home you have to learn How to Fish."
+set developer = "Dazed Games"
+set publisher = "Dazed Games"
+set exe = "$path/How to Fish.exe"
+set steam-app-id = "4001890"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/4001890/5c598fcb05447d87a6c67b5b9224103d7d93c16d.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4001890/library_hero.jpg"
+
+@v1.0.10
+set max-size = 1076517347
+set size = 656881459
+download "magnet:?xt=urn:btih:5f07aab598aeb599d38470d2a85225f60be121b5&dn=How%20to%20Fish&xl=419635888&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/How to Fish/How.to.Fish.v1.0.10-OFME.rar"
+rm "$path/How to Fish/How.to.Fish.v1.0.10-OFME.rar"
+unzip "$path/How to Fish/Fix Repair/HowToFish_Fix_Repair_Steam_V2_Generic.rar"
+rm "$path/How to Fish/Fix Repair/HowToFish_Fix_Repair_Steam_V2_Generic.rar"
+rsynca "$path/How to Fish/Fix Repair|$path/How to Fish/How to Fish"
+rm "$path/How to Fish/Fix Repair"
+mv "$path/How to Fish/How to Fish/*|$path"
+rm "$path/How to Fish"

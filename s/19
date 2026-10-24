@@ -1,0 +1,21 @@
+set name = "Gamble With Your Friends"
+set description = "An online 1-6 player co-op "casino crawler" where you and your friends share one bank account and one massive debt. Gamble, buy sketchy items, make terrible decisions, and climb an ominous casino tower to hit your loan shark’s daily quota in 5 minutes - or face the consequences."
+set developer = "TEAM GWYF"
+set publisher = "TENSTACK"
+set exe = "$path/Gamble With Your Friends.exe"
+set steam-app-id = "3892270"
+set logo = "https://shared.fastly.steamstatic.com/community_assets/images/apps/3892270/620adde61e9a7003f375bb5979fadde34eafa9d6.jpg"
+set banner = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3892270/library_hero.jpg"
+
+@v1.0.11
+set max-size = 3123177119
+set size = 2272408891
+download "magnet:?xt=urn:btih:9c1b4430d25f953c8953811271ffccd25b7f6590&dn=Gamble%20With%20Your%20Friends&xl=850768228&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337"
+unzip "$path/Gamble With Your Friends/Gamble.With.Your.Friends.v1.0.11-OFME.rar"
+rm "$path/Gamble With Your Friends/Gamble.With.Your.Friends.v1.0.11-OFME.rar"
+unzip "$path/Gamble With Your Friends/Fix Repair/GambleWithYourFriends_Fix_Repair_Steam_Generic.rar"
+rm "$path/Gamble With Your Friends/Fix Repair/GambleWithYourFriends_Fix_Repair_Steam_Generic.rar"
+rsynca "$path/Gamble With Your Friends/Fix Repair|$path/Gamble With Your Friends/Gamble With Your Friends"
+rm "$path/Gamble With Your Friends/Fix Repair"
+mv "$path/Gamble With Your Friends/Gamble With Your Friends/*|$path"
+rm "$path/Gamble With Your Friends"
